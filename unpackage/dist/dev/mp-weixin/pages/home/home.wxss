@@ -1,0 +1,88 @@
+.container {
+  position: relative;
+}
+.container .header-bar {
+  position: relative;
+  height: 240rpx;
+  background: -webkit-linear-gradient(to bottom right, #f7883b, #f8ba63);
+  background: -webkit-linear-gradient(top left, #f7883b, #f8ba63);
+  background: linear-gradient(to bottom right, #f7883b, #f8ba63);
+}
+.container .header-bar .header-userinfo {
+  height: 100%;
+  padding: 0rpx 40rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.container .header-bar .header-userinfo image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.container .header-bar .header-userinfo text {
+  color: #fff;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+.container .list-bar {
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.container .list-bar .list-bar-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  height: 80rpx;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #000;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+}
+.container .list-bar .list-bar-title .icon {
+  font-weight: normal;
+}
+.container .list-bar .list-bar-body {
+  padding: 30rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.container .list-bar .list-bar-body .item {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 16.66%;
+          flex: 0 0 16.66%;
+  font-size: 28rpx;
+  color: #404040;
+  text-align: center;
+}
+.container .list-bar .list-bar-body .item:active {
+  background: #eee;
+  border-radius: 10rpx;
+}
+.container .list-bar .list-bar-body .item .icon {
+  font-size: 46rpx;
+  margin-bottom: 10rpx;
+  color: #07a;
+}
+

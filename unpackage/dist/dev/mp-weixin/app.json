@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/authorize/authorize",
+    "pages/home/home",
+    "pages/user/user",
+    "pages/customer/customer",
+    "pages/supplier/supplier",
+    "pages/goods/goods",
+    "pages/price/price",
+    "pages/paymentmethod/paymentmethod"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "商城",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}

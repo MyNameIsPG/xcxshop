@@ -1,0 +1,65 @@
+{
+  "id": "1765593",
+  "name": "海鲜小程序",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "974798",
+      "name": "付款",
+      "font_class": "fukuan",
+      "unicode": "e6a1",
+      "unicode_decimal": 59041
+    },
+    {
+      "icon_id": "1249044",
+      "name": "付款",
+      "font_class": "fukuan1",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "2118494",
+      "name": "价格",
+      "font_class": "jiage",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "8288870",
+      "name": "商品",
+      "font_class": "shangpin",
+      "unicode": "e852",
+      "unicode_decimal": 59474
+    },
+    {
+      "icon_id": "9711268",
+      "name": "人员",
+      "font_class": "renyuan",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "4465003",
+      "name": "供应商",
+      "font_class": "gongyingshang",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "9193446",
+      "name": "标签",
+      "font_class": "biaoqian",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "9478558",
+      "name": "客户",
+      "font_class": "kehu",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    }
+  ]
+}
