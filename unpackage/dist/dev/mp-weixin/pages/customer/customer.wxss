@@ -15,7 +15,7 @@
 }
 .container .container-list .item::after {
   position: absolute;
-  content: '\e6b0';
+  content: '\E6B0';
   right: 0rpx;
   top: 12rpx;
   font-family: 'iconfont';

@@ -84,6 +84,18 @@
 			}
 		},
 		{
+			"path": "pages/goodsAdd/goodsAdd",
+			"style": {
+				"navigationBarTitleText": "新增商品"
+			}
+		},
+		{
+			"path": "pages/goodsDetails/goodsDetails",
+			"style": {
+				"navigationBarTitleText": "商品详情"
+			}
+		},
+		{
 			"path": "pages/paymentmethodAdd/paymentmethodAdd",
 			"style": {
 				"navigationBarTitleText": "新增付款方式"

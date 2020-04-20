@@ -57,7 +57,7 @@
   font-weight: normal;
 }
 .container .list-bar .list-bar-body {
-  padding: 30rpx;
+  padding: 30rpx 30rpx 0 30rpx;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -75,6 +75,7 @@
   font-size: 28rpx;
   color: #404040;
   text-align: center;
+  margin-bottom: 30rpx;
 }
 .container .list-bar .list-bar-body .item:active {
   background: #eee;
@@ -84,5 +85,15 @@
   font-size: 46rpx;
   margin-bottom: 10rpx;
   color: #07a;
+}
+.container .list-bar .item5 .item {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 20%;
+          flex: 0 0 20%;
+}
+.container .list-bar .item6 .item {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 16.66%;
+          flex: 0 0 16.66%;
 }
 
