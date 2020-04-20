@@ -1,0 +1,73 @@
+/*表单共通样式*/
+.uni-form
+	.uni-form-item
+		position relative
+		background #FFFFFF
+		border-bottom 1px solid #f1f1f1
+		&:last-child
+			border-bottom none
+		.uni-form-item__label
+			width 80px
+			text-align right
+			vertical-align middle
+			float left
+			font-size 30rpx
+			color #606266
+			line-height 36px
+			padding 0 12px 0 0
+			box-sizing border-box
+		.uni-form-item__content
+			margin-left 80px
+			position relative
+			.uni-input__inner
+				-webkit-appearance none
+				background-color #fff
+				box-sizing border-box
+				display inline-block
+				height 36px
+				line-height 36px
+				outline none
+				padding 0 15px
+				transition border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+				width 100%
+				border none
+				font-size 30rpx
+				color #606266
+		.uni-button__content
+			padding 20rpx 30rpx
+			display flex
+			.uni-button
+				flex 1
+				padding 8px 20px
+				font-size 14px
+				border-radius 4px
+				line-height 1
+				white-space nowrap
+				cursor pointer
+				background #fff
+				border 1px solid #dcdfe6
+				color #606266
+				-webkit-appearance none
+				text-align center
+				box-sizing border-box
+				outline none
+				margin 0
+				transition 0.1s
+				font-weight 500
+				margin-right 10px
+				&:last-child
+					margin-right 0
+			.uni-button__primary
+				color #fff
+				background-color #409eff
+				border-color #409eff
+			.uni-button__danger
+				color #fff
+				background-color #f56c6c
+				border-color #f56c6c
+		.file-image-list
+			padding 20rpx 20rpx
+			image
+				width 60px
+				height 60px
+				border 1px solid #eee

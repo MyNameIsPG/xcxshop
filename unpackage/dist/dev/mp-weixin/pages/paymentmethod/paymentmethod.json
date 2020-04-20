@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "付款方式",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-add": "/components/uni-add/uni-add"
+  }
 }

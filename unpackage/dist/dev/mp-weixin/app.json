@@ -7,7 +7,15 @@
     "pages/supplier/supplier",
     "pages/goods/goods",
     "pages/price/price",
-    "pages/paymentmethod/paymentmethod"
+    "pages/paymentmethod/paymentmethod",
+    "pages/userAdd/userAdd",
+    "pages/userDetails/userDetails",
+    "pages/customerAdd/customerAdd",
+    "pages/customerDetails/customerDetails",
+    "pages/supplierAdd/supplierAdd",
+    "pages/supplierDetails/supplierDetails",
+    "pages/paymentmethodAdd/paymentmethodAdd",
+    "pages/paymentmethodDetails/paymentmethodDetails"
   ],
   "subPackages": [],
   "window": {

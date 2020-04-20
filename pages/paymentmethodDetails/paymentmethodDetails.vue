@@ -1,0 +1,56 @@
+<template>
+	<view>
+		<form @submit="formSubmit" @reset="formReset" class="uni-form">
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">姓名</view>
+				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入姓名" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">性别</view>
+				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入性别" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">生日</view>
+				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入生日" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">手机号</view>
+				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入手机号" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">身份证</view>
+				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入身份证" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">银行卡</view>
+				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入银行卡" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">头像</view>
+				<view class="uni-form-item__content">
+					<view class="file-image-list"><image class="" src="../../static/img/user_default.jpg" /></view>
+				</view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-button__content">
+					<button class="uni-button uni-button__primary" form-type="submit">修改</button>
+					<button class="uni-button uni-button__danger">删除</button>
+				</view>
+			</view>
+		</form>
+	</view>
+</template>
+
+<script>
+export default {
+	data() {
+		return {};
+	},
+	onLoad(option) {
+		console.log(option.id);
+	},
+	methods: {}
+};
+</script>
+
+<style></style>

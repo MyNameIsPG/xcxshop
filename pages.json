@@ -1,6 +1,9 @@
 {
 	"pages": [{
-			"path": "pages/authorize/authorize"
+			"path": "pages/authorize/authorize",
+			"style": {
+				"navigationBarTitleText": "认证"
+			}
 		},
 		{
 			"path": "pages/home/home",
@@ -42,6 +45,54 @@
 			"path": "pages/paymentmethod/paymentmethod",
 			"style": {
 				"navigationBarTitleText": "付款方式"
+			}
+		},
+		{
+			"path": "pages/userAdd/userAdd",
+			"style": {
+				"navigationBarTitleText": "新增用户"
+			}
+		},
+		{
+			"path": "pages/userDetails/userDetails",
+			"style": {
+				"navigationBarTitleText": "用户详情"
+			}
+		},
+		{
+			"path": "pages/customerAdd/customerAdd",
+			"style": {
+				"navigationBarTitleText": "新增客户"
+			}
+		},
+		{
+			"path": "pages/customerDetails/customerDetails",
+			"style": {
+				"navigationBarTitleText": "客户详情"
+			}
+		},
+		{
+			"path": "pages/supplierAdd/supplierAdd",
+			"style": {
+				"navigationBarTitleText": "新增供应商"
+			}
+		},
+		{
+			"path": "pages/supplierDetails/supplierDetails",
+			"style": {
+				"navigationBarTitleText": "供应商详情"
+			}
+		},
+		{
+			"path": "pages/paymentmethodAdd/paymentmethodAdd",
+			"style": {
+				"navigationBarTitleText": "新增付款方式"
+			}
+		},
+		{
+			"path": "pages/paymentmethodDetails/paymentmethodDetails",
+			"style": {
+				"navigationBarTitleText": "付款方式详情"
 			}
 		}
 	],

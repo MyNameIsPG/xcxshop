@@ -1,11 +1,11 @@
 <template>
 	<view class="container">
 		<view class="container-list">
-			<view class="item" v-for="item in userList" :key="item">
+			<view class="item" v-for="item in userList" :key="item" @click="handleClickDetails(item)">
 				<view class="left"><image src="../../static/img/user_default.jpg"></image></view>
 				<view class="right">
 					<view class="row row-lines"><view class="name">张三</view></view>
-					<view class="row">
+					<!-- <view class="row">
 						手机号码：
 						<text class="text">18588773304</text>
 					</view>
@@ -16,24 +16,37 @@
 					<view class="row">
 						银行卡号：
 						<text class="text">1531254831821</text>
-					</view>
+					</view> -->
 				</view>
 			</view>
 		</view>
+		<uni-add @add-btn-click="addBtnClick"></uni-add>
 	</view>
 </template>
 
 <script>
+import uniAdd from '../../components/uni-add/uni-add.vue';
 export default {
+	components: {
+		uniAdd
+	},
 	data() {
 		return {
 			userList: 10
 		};
 	},
-	onLoad() {
-		console.log('我是用户');
-	},
-	methods: {}
+	methods: {
+		addBtnClick() {
+			uni.navigateTo({
+				url: `/pages/userAdd/userAdd`
+			});
+		},
+		handleClickDetails(id) {
+			uni.navigateTo({
+				url: `/pages/userDetails/userDetails?id=${id}`
+			});
+		}
+	}
 };
 </script>
 
@@ -47,6 +60,16 @@ export default {
 			padding 10rpx 20rpx
 			box-sizing border-box
 			display flex
+			position relative
+			&::after
+				position absolute
+				content '\e6b0'
+				right 0rpx
+				top 12rpx
+				font-family 'iconfont'
+				font-size 28px
+				color #999
+				transform rotate(90deg)
 			.left
 				width 80rpx
 				height 80rpx
@@ -60,6 +83,8 @@ export default {
 					height 100%
 			.right
 				flex 1
+				display flex
+				align-items center
 				.row
 					color #999
 					font-size 28rpx

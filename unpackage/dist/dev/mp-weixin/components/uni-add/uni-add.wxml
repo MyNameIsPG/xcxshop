@@ -1,0 +1,1 @@
+<view class="fixed-box-add data-v-726b9118"><view data-event-opts="{{[['tap',[['handleClickCommonAddBtn',['$event']]]]]}}" class="fixed-box-add-btn data-v-726b9118" bindtap="__e"><view class="circle-v data-v-726b9118"></view><view class="circle-h data-v-726b9118"></view></view></view>

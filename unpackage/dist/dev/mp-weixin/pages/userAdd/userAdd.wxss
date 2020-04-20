@@ -1,0 +1,73 @@
+.uni-form .uni-form-item {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #f1f1f1;
+}
+.uni-form .uni-form-item:last-child {
+  border-bottom: none;
+}
+.uni-form .uni-form-item .uni-form-item__label {
+  width: 80px;
+  text-align: right;
+  vertical-align: middle;
+  float: left;
+  font-size: 30rpx;
+  color: #606266;
+  line-height: 36px;
+  padding: 0 12px 0 0;
+  box-sizing: border-box;
+}
+.uni-form .uni-form-item .uni-form-item__content {
+  margin-left: 80px;
+  position: relative;
+}
+.uni-form .uni-form-item .uni-form-item__content .uni-input__inner {
+  -webkit-appearance: none;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: none;
+  padding: 0 15px;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 100%;
+  border: none;
+  font-size: 30rpx;
+  color: #606266;
+}
+.uni-form .uni-form-item .uni-button__content {
+  padding: 20rpx 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.uni-form .uni-form-item .uni-button__content .uni-button {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  font-weight: 500;
+}
+.uni-form .uni-form-item .uni-button__content .uni-button__primary {
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+}
+

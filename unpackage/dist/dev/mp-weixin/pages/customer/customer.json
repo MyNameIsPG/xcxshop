@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "客户管理",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-add": "/components/uni-add/uni-add"
+  }
 }
