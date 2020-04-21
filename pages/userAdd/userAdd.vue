@@ -3,11 +3,11 @@
 		<form @submit="formSubmit" class="uni-form">
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">姓名</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入姓名" /></view>
+				<view class="uni-form-item__content"><input v-model="name" class="uni-input__inner" name="input" placeholder="请输入姓名" /></view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">手机号</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入手机号" /></view>
+				<view class="uni-form-item__content"><input v-model="phone" class="uni-input__inner" name="input" placeholder="请输入手机号" /></view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">身份证</view>
@@ -27,7 +27,10 @@
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			name: '11111',
+			phone: ''
+		};
 	},
 	methods: {
 		formSubmit: function(e) {

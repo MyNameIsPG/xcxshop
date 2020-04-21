@@ -1,23 +1,25 @@
 {
   "pages": [
+    "pages/formTest/formTest",
     "pages/authorize/authorize",
     "pages/home/home",
     "pages/user/user",
-    "pages/customer/customer",
-    "pages/supplier/supplier",
-    "pages/goods/goods",
-    "pages/price/price",
-    "pages/paymentmethod/paymentmethod",
     "pages/userAdd/userAdd",
     "pages/userDetails/userDetails",
+    "pages/customer/customer",
     "pages/customerAdd/customerAdd",
     "pages/customerDetails/customerDetails",
+    "pages/supplier/supplier",
     "pages/supplierAdd/supplierAdd",
     "pages/supplierDetails/supplierDetails",
+    "pages/goods/goods",
     "pages/goodsAdd/goodsAdd",
     "pages/goodsDetails/goodsDetails",
+    "pages/price/price",
+    "pages/paymentmethod/paymentmethod",
     "pages/paymentmethodAdd/paymentmethodAdd",
-    "pages/paymentmethodDetails/paymentmethodDetails"
+    "pages/paymentmethodDetails/paymentmethodDetails",
+    "pages/expenseCategory/expenseCategory"
   ],
   "subPackages": [],
   "window": {
@@ -27,5 +29,5 @@
     "backgroundColor": "#F8F8F8"
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap15.json"
+  "sitemapLocation": "sitemap65.json"
 }

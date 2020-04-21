@@ -1,5 +1,8 @@
 {
 	"pages": [{
+			"path": "pages/formTest/formTest",
+			"style": {}
+		}, {
 			"path": "pages/authorize/authorize",
 			"style": {
 				"navigationBarTitleText": "认证"
@@ -18,45 +21,21 @@
 			}
 		},
 		{
-			"path": "pages/customer/customer",
-			"style": {
-				"navigationBarTitleText": "客户管理"
-			}
-		},
-		{
-			"path": "pages/supplier/supplier",
-			"style": {
-				"navigationBarTitleText": "供应商管理"
-			}
-		},
-		{
-			"path": "pages/goods/goods",
-			"style": {
-				"navigationBarTitleText": "商品管理"
-			}
-		},
-		{
-			"path": "pages/price/price",
-			"style": {
-				"navigationBarTitleText": "价格管理"
-			}
-		},
-		{
-			"path": "pages/paymentmethod/paymentmethod",
-			"style": {
-				"navigationBarTitleText": "付款方式"
-			}
-		},
-		{
 			"path": "pages/userAdd/userAdd",
 			"style": {
-				"navigationBarTitleText": "新增用户"
+				"navigationBarTitleText": "新增人员"
 			}
 		},
 		{
 			"path": "pages/userDetails/userDetails",
 			"style": {
-				"navigationBarTitleText": "用户详情"
+				"navigationBarTitleText": "人员详情"
+			}
+		},
+		{
+			"path": "pages/customer/customer",
+			"style": {
+				"navigationBarTitleText": "客户管理"
 			}
 		},
 		{
@@ -72,6 +51,12 @@
 			}
 		},
 		{
+			"path": "pages/supplier/supplier",
+			"style": {
+				"navigationBarTitleText": "供应商管理"
+			}
+		},
+		{
 			"path": "pages/supplierAdd/supplierAdd",
 			"style": {
 				"navigationBarTitleText": "新增供应商"
@@ -81,6 +66,12 @@
 			"path": "pages/supplierDetails/supplierDetails",
 			"style": {
 				"navigationBarTitleText": "供应商详情"
+			}
+		},
+		{
+			"path": "pages/goods/goods",
+			"style": {
+				"navigationBarTitleText": "商品管理"
 			}
 		},
 		{
@@ -96,6 +87,18 @@
 			}
 		},
 		{
+			"path": "pages/price/price",
+			"style": {
+				"navigationBarTitleText": "价格管理"
+			}
+		},
+		{
+			"path": "pages/paymentmethod/paymentmethod",
+			"style": {
+				"navigationBarTitleText": "付款方式"
+			}
+		},
+		{
 			"path": "pages/paymentmethodAdd/paymentmethodAdd",
 			"style": {
 				"navigationBarTitleText": "新增付款方式"
@@ -106,6 +109,9 @@
 			"style": {
 				"navigationBarTitleText": "付款方式详情"
 			}
+		}, {
+			"path": "pages/expenseCategory/expenseCategory",
+			"style": {}
 		}
 	],
 	"globalStyle": {

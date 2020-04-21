@@ -1,0 +1,1 @@
+<form class="uni-form"><slot></slot><view class="uni-form-item"><view class="uni-button__content"><button data-event-opts="{{[['tap',[['submit',['$event']]]]]}}" class="uni-button uni-button__primary" bindtap="__e">新增</button></view></view></form>

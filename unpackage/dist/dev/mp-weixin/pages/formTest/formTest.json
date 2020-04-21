@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "uni-form-add": "/components/uni-form-add/uni-form-add",
+    "uni-add": "/components/uni-add/uni-add"
+  }
+}

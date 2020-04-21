@@ -6,6 +6,181 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "5190128",
+      "name": "基础 (1)",
+      "font_class": "jichu",
+      "unicode": "e808",
+      "unicode_decimal": 59400
+    },
+    {
+      "icon_id": "6302552",
+      "name": "账单",
+      "font_class": "zhangdan",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    },
+    {
+      "icon_id": "8093588",
+      "name": "核心商业",
+      "font_class": "hexinshangye",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "8215986",
+      "name": "报表",
+      "font_class": "baobiao",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "13904086",
+      "name": "支出",
+      "font_class": "zhichu1",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "536600",
+      "name": "月报",
+      "font_class": "yuebao",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    },
+    {
+      "icon_id": "1652473",
+      "name": "月报",
+      "font_class": "yuebao1",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "3704002",
+      "name": "周报",
+      "font_class": "zhoubao",
+      "unicode": "e7a9",
+      "unicode_decimal": 59305
+    },
+    {
+      "icon_id": "4158511",
+      "name": "周报",
+      "font_class": "zhoubao1",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "6999073",
+      "name": "日报",
+      "font_class": "ribao",
+      "unicode": "e7aa",
+      "unicode_decimal": 59306
+    },
+    {
+      "icon_id": "7777125",
+      "name": "周报",
+      "font_class": "zhoubao2",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "8794240",
+      "name": "年报",
+      "font_class": "nianbao",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "10847704",
+      "name": "日报",
+      "font_class": "ribao1",
+      "unicode": "e7ab",
+      "unicode_decimal": 59307
+    },
+    {
+      "icon_id": "12615217",
+      "name": "日报",
+      "font_class": "ribao2",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "14190697",
+      "name": "年报",
+      "font_class": "nianbao1",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "4372145",
+      "name": "对账单",
+      "font_class": "duizhangdan",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "13562423",
+      "name": "对账",
+      "font_class": "duizhang",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "3367131",
+      "name": "应收",
+      "font_class": "if__",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "9343819",
+      "name": "应付",
+      "font_class": "list_yingfukuan",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "6155891",
+      "name": "工资",
+      "font_class": "gongzi",
+      "unicode": "e7a8",
+      "unicode_decimal": 59304
+    },
+    {
+      "icon_id": "487273",
+      "name": "定期",
+      "font_class": "dingqi",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "524004",
+      "name": "暂无支出明细",
+      "font_class": "zanwuzhichumingxi",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "9358894",
+      "name": "利润",
+      "font_class": "lirun",
+      "unicode": "e674",
+      "unicode_decimal": 58996
+    },
+    {
+      "icon_id": "10759955",
+      "name": "支出",
+      "font_class": "zhichu",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "8132696",
+      "name": "右箭头",
+      "font_class": "arrow-right",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
       "icon_id": "7553640",
       "name": "运营中枢",
       "font_class": "RectangleCopy227",
