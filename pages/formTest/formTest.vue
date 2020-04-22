@@ -6,8 +6,12 @@
 				<view class="uni-form-item__content"><input v-model="form.name" class="uni-input__inner" placeholder="请输入姓名" /></view>
 			</view>
 			<view class="uni-form-item">
-				<view class="uni-form-item__label">姓名</view>
-				<view class="uni-form-item__content"><input v-model="form.phone" class="uni-input__inner" placeholder="请输入手机号" /></view>
+				<view class="uni-form-item__label">手机号码</view>
+				<view class="uni-form-item__content"><input v-model="form.phone" type="number" class="uni-input__inner" placeholder="请输入手机号" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">身份证</view>
+				<view class="uni-form-item__content"><input v-model="form.idCard" type="number" class="uni-input__inner" placeholder="请输入手机号" /></view>
 			</view>
 		</uni-form-add>
 
@@ -21,7 +25,8 @@ export default {
 		return {
 			form: {
 				name: '',
-				phone: ''
+				phone: '',
+				idCard: ''
 			},
 			rules: {
 				name: {
@@ -30,7 +35,13 @@ export default {
 				},
 				phone: {
 					required: '',
+					type: 'phone',
 					message: '请输入手机号'
+				},
+				idCard: {
+					required: '',
+					type: 'cardnum',
+					message: '请输入身份证'
 				}
 			}
 		};

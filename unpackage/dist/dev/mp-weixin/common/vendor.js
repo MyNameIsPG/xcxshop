@@ -757,7 +757,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -7086,7 +7086,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7107,14 +7107,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7190,7 +7190,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -8527,7 +8527,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/formTest/formTest": {}, "pages/authorize/authorize": { "navigationBarTitleText": "认证" }, "pages/home/home": { "navigationBarTitleText": "首页" }, "pages/user/user": { "navigationBarTitleText": "人员管理" }, "pages/userAdd/userAdd": { "navigationBarTitleText": "新增人员" }, "pages/userDetails/userDetails": { "navigationBarTitleText": "人员详情" }, "pages/customer/customer": { "navigationBarTitleText": "客户管理" }, "pages/customerAdd/customerAdd": { "navigationBarTitleText": "新增客户" }, "pages/customerDetails/customerDetails": { "navigationBarTitleText": "客户详情" }, "pages/supplier/supplier": { "navigationBarTitleText": "供应商管理" }, "pages/supplierAdd/supplierAdd": { "navigationBarTitleText": "新增供应商" }, "pages/supplierDetails/supplierDetails": { "navigationBarTitleText": "供应商详情" }, "pages/goods/goods": { "navigationBarTitleText": "商品管理" }, "pages/goodsAdd/goodsAdd": { "navigationBarTitleText": "新增商品" }, "pages/goodsDetails/goodsDetails": { "navigationBarTitleText": "商品详情" }, "pages/price/price": { "navigationBarTitleText": "价格管理" }, "pages/paymentmethod/paymentmethod": { "navigationBarTitleText": "付款方式" }, "pages/paymentmethodAdd/paymentmethodAdd": { "navigationBarTitleText": "新增付款方式" }, "pages/paymentmethodDetails/paymentmethodDetails": { "navigationBarTitleText": "付款方式详情" }, "pages/expenseCategory/expenseCategory": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "商城", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/formTest/formTest": { "usingComponents": {}, "usingAutoImportComponents": { "uni-form-add": "/components/uni-form-add/uni-form-add", "uni-add": "/components/uni-add/uni-add" } }, "pages/authorize/authorize": { "navigationBarTitleText": "认证", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/home/home": { "navigationBarTitleText": "首页", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/user/user": { "navigationBarTitleText": "人员管理", "usingComponents": { "uni-add": "/components/uni-add/uni-add" }, "usingAutoImportComponents": { "uni-add": "/components/uni-add/uni-add" } }, "pages/userAdd/userAdd": { "navigationBarTitleText": "新增人员", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/userDetails/userDetails": { "navigationBarTitleText": "人员详情", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/customer/customer": { "navigationBarTitleText": "客户管理", "usingComponents": { "uni-add": "/components/uni-add/uni-add" }, "usingAutoImportComponents": { "uni-add": "/components/uni-add/uni-add" } }, "pages/customerAdd/customerAdd": { "navigationBarTitleText": "新增客户", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/customerDetails/customerDetails": { "navigationBarTitleText": "客户详情", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/supplier/supplier": { "navigationBarTitleText": "供应商管理", "usingComponents": { "uni-add": "/components/uni-add/uni-add" }, "usingAutoImportComponents": { "uni-add": "/components/uni-add/uni-add" } }, "pages/supplierAdd/supplierAdd": { "navigationBarTitleText": "新增供应商", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/supplierDetails/supplierDetails": { "navigationBarTitleText": "供应商详情", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/goods/goods": { "navigationBarTitleText": "商品管理", "usingComponents": { "uni-add": "/components/uni-add/uni-add" }, "usingAutoImportComponents": { "uni-add": "/components/uni-add/uni-add" } }, "pages/goodsAdd/goodsAdd": { "navigationBarTitleText": "新增商品", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/goodsDetails/goodsDetails": { "navigationBarTitleText": "商品详情", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/price/price": { "navigationBarTitleText": "价格管理", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/paymentmethod/paymentmethod": { "navigationBarTitleText": "付款方式", "usingComponents": { "uni-add": "/components/uni-add/uni-add" }, "usingAutoImportComponents": { "uni-add": "/components/uni-add/uni-add" } }, "pages/paymentmethodAdd/paymentmethodAdd": { "navigationBarTitleText": "新增付款方式", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/paymentmethodDetails/paymentmethodDetails": { "navigationBarTitleText": "付款方式详情", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/expenseCategory/expenseCategory": { "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "商城", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */

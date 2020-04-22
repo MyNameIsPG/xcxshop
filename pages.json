@@ -1,8 +1,5 @@
 {
 	"pages": [{
-			"path": "pages/formTest/formTest",
-			"style": {}
-		}, {
 			"path": "pages/authorize/authorize",
 			"style": {
 				"navigationBarTitleText": "认证"

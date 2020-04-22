@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/formTest/formTest",
     "pages/authorize/authorize",
     "pages/home/home",
     "pages/user/user",
@@ -28,6 +27,5 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap65.json"
+  "usingComponents": {}
 }
