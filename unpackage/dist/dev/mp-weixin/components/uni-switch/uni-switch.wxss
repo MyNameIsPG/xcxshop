@@ -1,0 +1,13 @@
+.swith-box {
+  padding: 6px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.wx-switch-input {
+  zoom: 0.5;
+}
+

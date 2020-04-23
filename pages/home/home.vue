@@ -202,7 +202,7 @@ export default {
 							path: 'paymentmethod'
 						},
 						{
-							title: '支出类别',
+							title: '支付类别',
 							icon: 'icon iconfont icon-zhichu',
 							path: 'expenseCategory'
 						}

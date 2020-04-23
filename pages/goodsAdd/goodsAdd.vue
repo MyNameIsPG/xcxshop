@@ -1,40 +1,51 @@
 <template>
 	<view>
-		<form @submit="formSubmit" class="uni-form">
+		<uni-form-add class="uni-form" :model="form" :rules="rules" @submit="submitForm">
 			<view class="uni-form-item">
-				<view class="uni-form-item__label">姓名</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入姓名" /></view>
+				<view class="uni-form-item__label">
+					<sup>*</sup>
+					商品名称
+				</view>
+				<view class="uni-form-item__content"><input v-model="form.Name" class="uni-input__inner" placeholder="请输入商品名称" /></view>
 			</view>
 			<view class="uni-form-item">
-				<view class="uni-form-item__label">手机号</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入手机号" /></view>
+				<view class="uni-form-item__label">商品类型</view>
+				<view class="uni-form-item__content"><input v-model="form.FAGId" class="uni-input__inner" placeholder="请输入商品类型" /></view>
 			</view>
 			<view class="uni-form-item">
-				<view class="uni-form-item__label">身份证</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入身份证" /></view>
+				<view class="uni-form-item__label">是否商品大类</view>
+				<view class="uni-form-item__content"><uni-switch v-model="form.IsFamily"></uni-switch></view>
 			</view>
 			<view class="uni-form-item">
-				<view class="uni-form-item__label">银行卡</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入银行卡" /></view>
+				<view class="uni-form-item__label">是否销售</view>
+				<view class="uni-form-item__content"><uni-switch v-model="form.IsSelling"></uni-switch></view>
 			</view>
-			<view class="uni-form-item">
-				<view class="uni-button__content"><button class="uni-button uni-button__primary" form-type="submit">新增</button></view>
-			</view>
-		</form>
+		</uni-form-add>
 	</view>
 </template>
 
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			form: {
+				Name: '',
+				FAGId: '',
+				IsFamily: false,
+				IsSelling: false
+			},
+			rules: {
+				Name: {
+					required: '',
+					message: '请输入商品名称'
+				}
+			}
+		};
 	},
 	methods: {
-		formSubmit: function(e) {
-			console.log('form发生了submit事件，携带数据为：' + JSON.stringify(e.detail.value));
-			var formdata = e.detail.value;
+		submitForm: function(param) {
 			uni.showModal({
-				content: '表单数据内容：' + JSON.stringify(formdata),
+				content: '表单数据内容：' + JSON.stringify(param),
 				showCancel: false
 			});
 		}

@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "客户详情",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-form-edit": "/components/uni-form-edit/uni-form-edit"
+  }
 }

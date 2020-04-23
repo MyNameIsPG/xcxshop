@@ -1,0 +1,1 @@
+<view class="swith-box _div"><switch checked="{{value}}" data-event-opts="{{[['change',[['switchChange',['$event']]]]]}}" bindchange="__e"></switch></view>

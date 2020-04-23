@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "新增商品",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-form-add": "/components/uni-form-add/uni-form-add",
+    "uni-switch": "/components/uni-switch/uni-switch"
+  }
 }

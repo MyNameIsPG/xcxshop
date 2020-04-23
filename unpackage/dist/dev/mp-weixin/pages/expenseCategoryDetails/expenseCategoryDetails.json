@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "支付类别详情",
+  "usingComponents": {
+    "uni-form-edit": "/components/uni-form-edit/uni-form-edit"
+  }
+}

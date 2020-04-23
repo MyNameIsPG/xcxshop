@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "人员详情",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-form-edit": "/components/uni-form-edit/uni-form-edit",
+    "uni-switch": "/components/uni-switch/uni-switch"
+  }
 }

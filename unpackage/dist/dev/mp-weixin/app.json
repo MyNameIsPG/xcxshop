@@ -18,7 +18,9 @@
     "pages/paymentmethod/paymentmethod",
     "pages/paymentmethodAdd/paymentmethodAdd",
     "pages/paymentmethodDetails/paymentmethodDetails",
-    "pages/expenseCategory/expenseCategory"
+    "pages/expenseCategory/expenseCategory",
+    "pages/expenseCategoryAdd/expenseCategoryAdd",
+    "pages/expenseCategoryDetails/expenseCategoryDetails"
   ],
   "subPackages": [],
   "window": {
@@ -27,5 +29,6 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap3.json"
 }

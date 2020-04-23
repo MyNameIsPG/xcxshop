@@ -33,7 +33,8 @@
 }
 .table-list .table-list-head .item {
   padding: 0 10rpx;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-weight: 600;
 }
 .table-list .table-list-body .table-list-body-item {
@@ -50,7 +51,8 @@
 }
 .table-list .table-list-body .table-list-body-item .item {
   padding: 20rpx 10rpx;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .table-list .table-list-body .table-list-body-item .item3 {
   color: #888;
@@ -74,7 +76,8 @@
 }
 .search-bar {
   padding: 10rpx 20rpx;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -93,7 +96,8 @@
 .search-bar .search-bar-input input {
   -webkit-appearance: none;
   background-color: #ccc;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: inline-block;
   height: 30px;
   line-height: 30px;

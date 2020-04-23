@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "支付类别",
+  "usingComponents": {
+    "uni-add": "/components/uni-add/uni-add"
+  }
 }

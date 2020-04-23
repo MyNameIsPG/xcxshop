@@ -7,7 +7,7 @@
 		&:last-child
 			border-bottom none
 		.uni-form-item__label
-			width 80px
+			width 90px
 			text-align right
 			vertical-align middle
 			float left
@@ -16,8 +16,11 @@
 			line-height 36px
 			padding 0 12px 0 0
 			box-sizing border-box
+			sup
+				display inline-block
+				color red
 		.uni-form-item__content
-			margin-left 80px
+			margin-left 90px
 			position relative
 			.uni-input__inner
 				-webkit-appearance none
@@ -33,11 +36,17 @@
 				border none
 				font-size 30rpx
 				color #606266
+			textarea.uni-input__inner
+				height 90px
+				line-height normal
+				padding 10px 15px
+				box-sizing border-box
+				margin 0px
 		.uni-button__content
 			padding 20rpx 30rpx
-			display flex
+			box-sizing border-box
 			.uni-button
-				flex 1
+				width 100%
 				padding 8px 20px
 				font-size 14px
 				border-radius 4px

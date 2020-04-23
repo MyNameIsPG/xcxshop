@@ -1,56 +1,84 @@
 <template>
 	<view>
-		<form @submit="formSubmit" @reset="formReset" class="uni-form">
+		<uni-form-edit class="uni-form" :model="form" :rules="rules" @submit="submitForm">
 			<view class="uni-form-item">
-				<view class="uni-form-item__label">姓名</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入姓名" /></view>
-			</view>
-			<view class="uni-form-item">
-				<view class="uni-form-item__label">性别</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入性别" /></view>
-			</view>
-			<view class="uni-form-item">
-				<view class="uni-form-item__label">生日</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入生日" /></view>
-			</view>
-			<view class="uni-form-item">
-				<view class="uni-form-item__label">手机号</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入手机号" /></view>
-			</view>
-			<view class="uni-form-item">
-				<view class="uni-form-item__label">身份证</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入身份证" /></view>
-			</view>
-			<view class="uni-form-item">
-				<view class="uni-form-item__label">银行卡</view>
-				<view class="uni-form-item__content"><input class="uni-input__inner" name="input" placeholder="请输入银行卡" /></view>
-			</view>
-			<view class="uni-form-item">
-				<view class="uni-form-item__label">头像</view>
-				<view class="uni-form-item__content">
-					<view class="file-image-list"><image class="" src="../../static/img/user_default.jpg" /></view>
+				<view class="uni-form-item__label">
+					<sup>*</sup>
+					姓名
 				</view>
+				<view class="uni-form-item__content"><input v-model="form.Name" class="uni-input__inner" placeholder="请输入姓名" /></view>
 			</view>
 			<view class="uni-form-item">
-				<view class="uni-button__content">
-					<button class="uni-button uni-button__primary" form-type="submit">修改</button>
-					<button class="uni-button uni-button__danger">删除</button>
+				<view class="uni-form-item__label">
+					<sup>*</sup>
+					手机号
 				</view>
+				<view class="uni-form-item__content"><input v-model="form.Phone" type="number" class="uni-input__inner" placeholder="请输入手机号" /></view>
 			</view>
-		</form>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">
+					<sup>*</sup>
+					身份证
+				</view>
+				<view class="uni-form-item__content"><input v-model="form.IdCard" type="number" class="uni-input__inner" placeholder="请输入身份证" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">银行卡号</view>
+				<view class="uni-form-item__content"><input v-model="form.BankId" type="number" class="uni-input__inner" placeholder="请输入银行卡号" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">开户行名称</view>
+				<view class="uni-form-item__content"><input v-model="form.BankName" class="uni-input__inner" placeholder="请输入开户行名称" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">地址</view>
+				<view class="uni-form-item__content"><textarea v-model="form.Address" class="uni-input__inner" placeholder="请输入地址" /></view>
+			</view>
+		</uni-form-edit>
 	</view>
 </template>
 
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			form: {
+				Name: '1232',
+				Phone: '',
+				IdCard: '',
+				BankId: '',
+				BankName: '招商',
+				Address: ''
+			},
+			rules: {
+				Name: {
+					required: '',
+					message: '请输入姓名'
+				},
+				Phone: {
+					required: '',
+					type: 'phone',
+					message: '请输入手机号'
+				},
+				IdCard: {
+					required: '',
+					type: 'cardnum',
+					message: '请输入身份证'
+				}
+			}
+		};
 	},
-	onLoad(option) {
-		console.log(option.id);
-	},
-	methods: {}
+	methods: {
+		submitForm: function(param) {
+			uni.showModal({
+				content: '表单数据内容：' + JSON.stringify(param),
+				showCancel: false
+			});
+		}
+	}
 };
 </script>
 
-<style></style>
+<style lang="stylus">
+
+</style>

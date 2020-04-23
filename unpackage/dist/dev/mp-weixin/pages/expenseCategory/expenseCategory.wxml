@@ -1,1 +1,1 @@
-<view>支出类别</view>
+<view class="container"><view class="container-list"><block wx:for="{{userList}}" wx:for-item="item" wx:for-index="__i0__" wx:key="*this"><view data-event-opts="{{[['tap',[['handleClickDetails',['$0'],[[['userList','',__i0__]]]]]]]}}" class="item" bindtap="__e"><view class="right"><view class="row row-lines"><view class="name">现金</view></view></view></view></block></view><uni-add bind:addBtnClick="__e" vue-id="3a12cedc-1" data-event-opts="{{[['^addBtnClick',[['addBtnClick']]]]}}" bind:__l="__l"></uni-add></view>

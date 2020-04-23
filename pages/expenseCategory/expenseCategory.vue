@@ -1,14 +1,91 @@
 <template>
-	<view>支出类别</view>
+	<view class="container">
+		<view class="container-list">
+			<view class="item" v-for="item in userList" :key="item" @click="handleClickDetails(item)">
+				<view class="right">
+					<view class="row row-lines"><view class="name">现金</view></view>
+				</view>
+			</view>
+		</view>
+		<uni-add @add-btn-click="addBtnClick"></uni-add>
+	</view>
 </template>
 
 <script>
+import uniAdd from '../../components/uni-add/uni-add.vue';
 export default {
-	data() {
-		return {};
+	components: {
+		uniAdd
 	},
-	methods: {}
+	data() {
+		return {
+			userList: 3,
+		};
+	},
+	methods: {
+		addBtnClick() {
+			uni.navigateTo({
+				url: `/pages/expenseCategoryAdd/expenseCategoryAdd`
+			});
+		},
+		handleClickDetails(id) {
+			uni.navigateTo({
+				url: `/pages/expenseCategoryDetails/expenseCategoryDetails?id=${id}`
+			});
+		}
+	}
 };
 </script>
 
-<style></style>
+<style lang="stylus">
+.container
+	position relative
+	.container-list
+		background #FFFFFF
+		.item
+			border-bottom 1px solid #EEEEEE
+			padding 10rpx 20rpx
+			box-sizing border-box
+			display flex
+			position relative
+			&::after
+				position absolute
+				content '\e6b0'
+				right 0rpx
+				top 12rpx
+				font-family 'iconfont'
+				font-size 28px
+				color #999
+				transform rotate(90deg)
+			.left
+				width 80rpx
+				height 80rpx
+				border 1px solid #F1F1F1
+				box-sizing border-box
+				border-radius 50%
+				overflow hidden
+				margin-right 10px
+				display flex
+				justify-content center
+				align-items center
+				color #FFFDEF
+				font-size 14px
+			.right
+				flex 1
+				display flex
+				align-items center
+				height 80rpx
+				.row
+					color #999
+					font-size 28rpx
+					.text
+						color #333333
+				.row-lines
+					display flex
+					align-items center
+					.name
+						color #000000
+						font-size 30rpx
+						font-weight 600
+						flex 1
+</style>

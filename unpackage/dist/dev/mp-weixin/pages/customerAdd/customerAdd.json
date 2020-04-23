@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "新增客户",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-form-add": "/components/uni-form-add/uni-form-add"
+  }
 }

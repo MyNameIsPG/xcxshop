@@ -106,9 +106,24 @@
 			"style": {
 				"navigationBarTitleText": "付款方式详情"
 			}
-		}, {
+		},
+		{
 			"path": "pages/expenseCategory/expenseCategory",
-			"style": {}
+			"style": {
+				"navigationBarTitleText": "支付类别"
+			}
+		},
+		{
+			"path": "pages/expenseCategoryAdd/expenseCategoryAdd",
+			"style": {
+				"navigationBarTitleText": "新增支付类别"
+			}
+		},
+		{
+			"path": "pages/expenseCategoryDetails/expenseCategoryDetails",
+			"style": {
+				"navigationBarTitleText": "支付类别详情"
+			}
 		}
 	],
 	"globalStyle": {
