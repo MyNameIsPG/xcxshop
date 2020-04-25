@@ -5,8 +5,7 @@
   right: 40rpx;
   bottom: 40rpx;
   background: #007aff;
-  -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
-          box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
   border-radius: 50%;
 }
 .fixed-box-add .fixed-box-add-btn.data-v-726b9118 {

@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "供应商详情",
-  "usingComponents": {
-    "uni-form-edit": "/components/uni-form-edit/uni-form-edit"
-  }
+  "usingComponents": {}
 }

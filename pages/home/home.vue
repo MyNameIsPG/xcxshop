@@ -222,26 +222,36 @@ export default {
 						{
 							title: '销售',
 							icon: 'icon iconfont icon-RectangleCopy121',
-							path: ''
+							path: 'order'
 						},
 						{
 							title: '采购',
 							icon: 'icon iconfont icon-RectangleCopy32',
-							path: ''
+							path: 'store'
 						},
 						{
 							title: '入库',
 							icon: 'icon iconfont icon-RectangleCopy131',
-							path: ''
+							path: 'inStore'
 						},
 						{
 							title: '库存',
 							icon: 'icon iconfont icon-RectangleCopy127',
-							path: ''
+							path: 'stock'
 						},
 						{
 							title: '批次利润',
 							icon: 'icon iconfont icon-lirun',
+							path: 'profit'
+						},
+						{
+							title: '订单',
+							icon: 'icon iconfont icon-RectangleCopy223',
+							path: 'orderList'
+						},
+						{
+							title: '退货',
+							icon: 'icon iconfont icon-RectangleCopy118',
 							path: ''
 						}
 					]
@@ -266,11 +276,6 @@ export default {
 							title: '工资',
 							icon: 'icon iconfont icon-gongzi',
 							path: ''
-						},
-						{
-							title: '退货',
-							icon: 'icon iconfont icon-RectangleCopy118',
-							path: ''
 						}
 					]
 				},
@@ -280,11 +285,6 @@ export default {
 					layoutColor: '',
 					icon: 'icon iconfont icon-zhangdan',
 					children: [
-						{
-							title: '订单',
-							icon: 'icon iconfont icon-RectangleCopy223',
-							path: ''
-						},
 						{
 							title: '应收',
 							icon: 'icon iconfont icon-if__',

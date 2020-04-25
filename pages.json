@@ -124,6 +124,42 @@
 			"style": {
 				"navigationBarTitleText": "支付类别详情"
 			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "销售"
+			}
+		},
+		{
+			"path": "pages/store/store",
+			"style": {
+				"navigationBarTitleText": "采购"
+			}
+		},
+		{
+			"path": "pages/inStore/inStore",
+			"style": {
+				"navigationBarTitleText": "入库"
+			}
+		},
+		{
+			"path": "pages/stock/stock",
+			"style": {
+				"navigationBarTitleText": "库存"
+			}
+		},
+		{
+			"path": "pages/profit/profit",
+			"style": {
+				"navigationBarTitleText": "批次利润"
+			}
+		},
+		{
+			"path": "pages/orderList/orderList",
+			"style": {
+				"navigationBarTitleText": "订单记录"
+			}
 		}
 	],
 	"globalStyle": {

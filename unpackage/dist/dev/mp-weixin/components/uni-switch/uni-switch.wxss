@@ -7,7 +7,7 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.wx-switch-input {
-  zoom: 0.5;
+.swith-box switch {
+  zoom: 0.7;
 }
 

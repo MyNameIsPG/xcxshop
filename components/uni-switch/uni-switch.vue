@@ -18,6 +18,6 @@ export default {
 	padding 6px 10px
 	display flex
 	align-items center
-.wx-switch-input
-	zoom 0.5
+	switch
+		zoom 0.7
 </style>

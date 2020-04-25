@@ -17,12 +17,10 @@ export default {
 	name: 'uniFormAdd',
 	props: {
 		model: {
-			type: Object,
-			default: {}
+			type: Object
 		},
 		rules: {
-			type: Object,
-			default: {}
+			type: Object
 		}
 	},
 	data() {

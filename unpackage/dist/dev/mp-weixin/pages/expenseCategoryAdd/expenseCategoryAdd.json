@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "新增支付类别",
-  "usingComponents": {
-    "uni-form-add": "/components/uni-form-add/uni-form-add"
-  }
+  "usingComponents": {}
 }

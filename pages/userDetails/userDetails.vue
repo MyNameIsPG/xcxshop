@@ -23,7 +23,7 @@
 				<view class="uni-form-item__content"><input v-model="form.AUIdCard" type="number" class="uni-input__inner" placeholder="请输入身份证" /></view>
 			</view>
 			<view class="uni-form-item">
-				<view class="uni-form-item__label">是否管理员</view>
+				<view class="uni-form-item__label">管理员</view>
 				<view class="uni-form-item__content"><uni-switch v-model="form.IsAdmin"></uni-switch></view>
 			</view>
 		</uni-form-edit>

@@ -20,7 +20,13 @@
     "pages/paymentmethodDetails/paymentmethodDetails",
     "pages/expenseCategory/expenseCategory",
     "pages/expenseCategoryAdd/expenseCategoryAdd",
-    "pages/expenseCategoryDetails/expenseCategoryDetails"
+    "pages/expenseCategoryDetails/expenseCategoryDetails",
+    "pages/order/order",
+    "pages/store/store",
+    "pages/inStore/inStore",
+    "pages/stock/stock",
+    "pages/profit/profit",
+    "pages/orderList/orderList"
   ],
   "subPackages": [],
   "window": {
@@ -29,6 +35,10 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap3.json"
+  "usingComponents": {
+    "uni-add": "/components/uni-add/uni-add",
+    "uni-form-add": "/components/uni-form-add/uni-form-add",
+    "uni-form-edit": "/components/uni-form-edit/uni-form-edit",
+    "uni-switch": "/components/uni-switch/uni-switch"
+  }
 }

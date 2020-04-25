@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-form-add :model="form" :rules="rules" @submit="submitForm">
+		<uni-form-add class="uni-form" :model="form" :rules="rules" @submit="submitForm">
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">姓名</view>
 				<view class="uni-form-item__content"><input v-model="form.name" class="uni-input__inner" placeholder="请输入姓名" /></view>
@@ -12,6 +12,10 @@
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">身份证</view>
 				<view class="uni-form-item__content"><input v-model="form.idCard" type="number" class="uni-input__inner" placeholder="请输入手机号" /></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">身份证</view>
+				<view class="uni-form-item__content"><uni-switch v-model="form.IsSelling"></uni-switch></view>
 			</view>
 		</uni-form-add>
 
@@ -26,7 +30,8 @@ export default {
 			form: {
 				name: '',
 				phone: '',
-				idCard: ''
+				idCard: '',
+				IsSelling: false
 			},
 			rules: {
 				name: {

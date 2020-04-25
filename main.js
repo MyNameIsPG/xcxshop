@@ -9,10 +9,10 @@ import uniSwitch from "./components/uni-switch/uni-switch.vue"
 
 Vue.config.productionTip = false
 
-Vue.use(uniAdd)
-Vue.use(uniFormAdd)
-Vue.use(uniFormEdit)
-Vue.use(uniSwitch)
+Vue.component("uniAdd", uniAdd);
+Vue.component("uni-form-add", uniFormAdd);
+Vue.component("uni-form-edit", uniFormEdit);
+Vue.component("uni-switch", uniSwitch);
 
 App.mpType = 'app'
 

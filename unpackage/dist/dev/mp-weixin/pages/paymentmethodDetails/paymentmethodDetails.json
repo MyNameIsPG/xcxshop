@@ -1,7 +1,4 @@
 {
   "navigationBarTitleText": "付款方式详情",
-  "usingComponents": {
-    "uni-form-edit": "/components/uni-form-edit/uni-form-edit",
-    "uni-switch": "/components/uni-switch/uni-switch"
-  }
+  "usingComponents": {}
 }

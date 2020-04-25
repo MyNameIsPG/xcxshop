@@ -1,7 +1,4 @@
 {
   "navigationBarTitleText": "商品详情",
-  "usingComponents": {
-    "uni-form-add": "/components/uni-form-add/uni-form-add",
-    "uni-switch": "/components/uni-switch/uni-switch"
-  }
+  "usingComponents": {}
 }
