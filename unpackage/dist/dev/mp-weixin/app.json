@@ -26,7 +26,12 @@
     "pages/inStore/inStore",
     "pages/stock/stock",
     "pages/profit/profit",
-    "pages/orderList/orderList"
+    "pages/orderList/orderList",
+    "pages/returnGoods/returnGoods",
+    "pages/statistics/day/day",
+    "pages/statistics/week/week",
+    "pages/statistics/month/month",
+    "pages/statistics/year/year"
   ],
   "subPackages": [],
   "window": {

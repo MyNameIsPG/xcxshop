@@ -15,153 +15,12 @@
 				{{ item.title }}
 			</view>
 			<view class="list-bar-body" :class="item.layout">
-				<view class="item" v-for="(i, k) in item.children" :key="index + '-' + k" v-bind:id="i.path" @click="handleClickBaseBtn">
+				<view class="item" v-for="(i, k) in item.children" :key="k" @click="handleClickBaseBtn(i.path, i.parent)">
 					<i :class="i.icon"></i>
 					{{ i.title }}
 				</view>
 			</view>
 		</view>
-
-		<!-- <view class="list-bar">
-			<view class="list-bar-title">
-				<i class="icon iconfont icon-biaoqian"></i>
-				基础模块
-			</view>
-			<view class="list-bar-body item6">
-				<view class="item" @click="handleClickBaseBtn('user')">
-					<i class="icon iconfont icon-renyuan"></i>
-					人员
-				</view>
-				<view class="item" @click="handleClickBaseBtn('customer')">
-					<i class="icon iconfont icon-kehu"></i>
-					客户
-				</view>
-				<view class="item" @click="handleClickBaseBtn('supplier')">
-					<i class="icon iconfont icon-gongyingshang"></i>
-					供应商
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					商品
-				</view>
-				<view class="item" @click="handleClickBaseBtn('price')">
-					<i class="icon iconfont icon-jiage"></i>
-					价格
-				</view>
-				<view class="item" @click="handleClickBaseBtn('paymentmethod')">
-					<i class="icon iconfont icon-fukuan1"></i>
-					付款方式
-				</view>
-			</view>
-		</view>
-
-		<view class="list-bar">
-			<view class="list-bar-title">
-				<i class="icon iconfont icon-biaoqian"></i>
-				销售模块
-			</view>
-			<view class="list-bar-body item5">
-				<view class="item" @click="handleClickBaseBtn('user')">
-					<i class="icon iconfont icon-renyuan"></i>
-					采购
-				</view>
-				<view class="item" @click="handleClickBaseBtn('customer')">
-					<i class="icon iconfont icon-kehu"></i>
-					入库
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					销售
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					派车管理
-				</view>
-			</view>
-		</view>
-
-		<view class="list-bar">
-			<view class="list-bar-title">
-				<i class="icon iconfont icon-biaoqian"></i>
-				售后模块
-			</view>
-			<view class="list-bar-body item5">
-				<view class="item" @click="handleClickBaseBtn('user')">
-					<i class="icon iconfont icon-renyuan"></i>
-					销售记录
-				</view>
-				<view class="item" @click="handleClickBaseBtn('customer')">
-					<i class="icon iconfont icon-kehu"></i>
-					批次利润
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					库存
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					支出明细
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					支出类别
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					定期支出
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					工资管理
-				</view>
-			</view>
-		</view>
-
-		<view class="list-bar">
-			<view class="list-bar-title">
-				<i class="icon iconfont icon-biaoqian"></i>
-				服务模块
-			</view>
-			<view class="list-bar-body item5">
-				<view class="item" @click="handleClickBaseBtn('user')">
-					<i class="icon iconfont icon-renyuan"></i>
-					应收
-				</view>
-				<view class="item" @click="handleClickBaseBtn('customer')">
-					<i class="icon iconfont icon-kehu"></i>
-					应付
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					客户对账
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					供应商对账
-				</view>
-			</view>
-		</view>
-
-		<view class="list-bar">
-			<view class="list-bar-title">
-				<i class="icon iconfont icon-biaoqian"></i>
-				报表统计
-			</view>
-			<view class="list-bar-body item5">
-				<view class="item" @click="handleClickBaseBtn('user')">
-					<i class="icon iconfont icon-renyuan"></i>
-					日报
-				</view>
-				<view class="item" @click="handleClickBaseBtn('customer')">
-					<i class="icon iconfont icon-kehu"></i>
-					周报
-				</view>
-				<view class="item" @click="handleClickBaseBtn('goods')">
-					<i class="icon iconfont icon-shangpin"></i>
-					年报
-				</view>
-			</view>
-		</view> -->
 	</view>
 </template>
 
@@ -252,7 +111,7 @@ export default {
 						{
 							title: '退货',
 							icon: 'icon iconfont icon-RectangleCopy118',
-							path: ''
+							path: 'returnGoods'
 						}
 					]
 				},
@@ -316,22 +175,26 @@ export default {
 						{
 							title: '日报',
 							icon: 'icon iconfont icon-ribao2',
-							path: ''
+							path: 'day',
+							parent: 'statistics'
 						},
 						{
 							title: '周报',
 							icon: 'icon iconfont icon-zhoubao2',
-							path: ''
+							path: 'week',
+							parent: 'statistics'
 						},
 						{
 							title: '月报',
 							icon: 'icon iconfont icon-yuebao',
-							path: ''
+							path: 'month',
+							parent: 'statistics'
 						},
 						{
 							title: '年报',
 							icon: 'icon iconfont icon-nianbao',
-							path: ''
+							path: 'year',
+							parent: 'statistics'
 						}
 					]
 				}
@@ -343,12 +206,17 @@ export default {
 		console.log('我是首页');
 	},
 	methods: {
-		handleClickBaseBtn(e) {
-			let path = e.target.id;
+		handleClickBaseBtn(path, parent) {
 			if (path) {
-				uni.navigateTo({
-					url: `/pages/${path}/${path}`
-				});
+				if(parent) {
+					uni.navigateTo({
+						url: `/pages/${parent}/${path}/${path}`
+					});
+				} else {
+					uni.navigateTo({
+						url: `/pages/${path}/${path}`
+					});
+				}
 			}
 		}
 	}

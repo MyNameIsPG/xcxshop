@@ -160,6 +160,36 @@
 			"style": {
 				"navigationBarTitleText": "订单记录"
 			}
+		},
+		{
+			"path": "pages/returnGoods/returnGoods",
+			"style": {
+				"navigationBarTitleText": "退货"
+			}
+		},
+		{
+			"path": "pages/statistics/day/day",
+			"style": {
+				"navigationBarTitleText": "日报"
+			}
+		},
+		{
+			"path": "pages/statistics/week/week",
+			"style": {
+				"navigationBarTitleText": "周报"
+			}
+		},
+		{
+			"path": "pages/statistics/month/month",
+			"style": {
+				"navigationBarTitleText": "月报"
+			}
+		},
+		{
+			"path": "pages/statistics/year/year",
+			"style": {
+				"navigationBarTitleText": "年报"
+			}
 		}
 	],
 	"globalStyle": {
