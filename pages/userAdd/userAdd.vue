@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-form-add class="uni-form" :model="form" :rules="rules" @submit="submitForm">
+		<uni-form-add class="uni-form" :model="form" :rules="rules" add-interface="AppUser">
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
@@ -57,14 +57,6 @@ export default {
 				}
 			}
 		};
-	},
-	methods: {
-		submitForm: function(param) {
-			uni.showModal({
-				content: '表单数据内容：' + JSON.stringify(param),
-				showCancel: false
-			});
-		}
 	}
 };
 </script>

@@ -7,6 +7,10 @@ import uniFormAdd from "./components/uni-form-add/uni-form-add.vue"
 import uniFormEdit from "./components/uni-form-edit/uni-form-edit.vue"
 import uniSwitch from "./components/uni-switch/uni-switch.vue"
 
+import {
+	apiRequest
+} from "./api/index.js"
+Vue.prototype.$request = apiRequest
 
 Vue.config.productionTip = false
 

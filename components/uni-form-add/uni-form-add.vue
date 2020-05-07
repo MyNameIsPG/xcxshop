@@ -21,12 +21,29 @@ export default {
 		},
 		rules: {
 			type: Object
+		},
+		addInterface: {
+			type: String
 		}
 	},
 	data() {
 		return {};
 	},
 	methods: {
+		async postSubmit(param) {
+			console.log(param)
+			this.$request({
+				url: this.addInterface,
+				methods: "POST",
+				data: param
+			});
+			uni.showToast({
+				title: "新增成功"
+			});
+			setTimeout(()=>{
+				uni.navigateBack(2);
+			},500)
+		},
 		submit: function() {
 			if (this.rules) {
 				for (let key in this.rules) {
@@ -64,6 +81,7 @@ export default {
 				}
 			}
 			this.$emit('submit', this.model);
+			this.postSubmit(this.model);
 		},
 		isPoneAvailable(value) {
 			var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-form-edit class="uni-form" :model="form" :rules="rules" @submit="submitForm">
+		<uni-form-edit class="uni-form" :model="form" :rules="rules" :uid="uid" query-one-interface="AppUser" edit-interface="AppUser">
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
@@ -34,9 +34,10 @@
 export default {
 	data() {
 		return {
+			uid: '',
 			form: {
-				AUName: '123',
-				AUPhone: '18588773304',
+				AUName: '',
+				AUPhone: '',
 				AUIdCard: '',
 				IsAdmin: true
 			},
@@ -58,13 +59,8 @@ export default {
 			}
 		};
 	},
-	methods: {
-		submitForm: function(param) {
-			uni.showModal({
-				content: '表单数据内容：' + JSON.stringify(param),
-				showCancel: false
-			});
-		}
+	onLoad(option) {
+		console.log(option.id)
 	}
 };
 </script>

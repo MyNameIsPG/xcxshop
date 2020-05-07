@@ -1,7 +1,7 @@
 <template>
 	<view class="container">
 		<view class="container-list">
-			<view class="item" v-for="item in userList" :key="item" @click="handleClickDetails(item)">
+			<view class="item" v-for="item in userList" :key="item" @click="handleClickDetails('02cf730ea4d44dfdada71f6abf0ef78c')">
 				<view class="left"><image src="../../static/img/user_default.jpg"></image></view>
 				<view class="right">
 					<view class="row row-lines"><view class="name">张三</view></view>
@@ -20,6 +20,7 @@
 				</view>
 			</view>
 		</view>
+		{{user}}
 		<uni-add @add-btn-click="addBtnClick"></uni-add>
 	</view>
 </template>
@@ -32,10 +33,17 @@ export default {
 	},
 	data() {
 		return {
-			userList: 10
+			userList: 10,
+			user: []
 		};
 	},
 	methods: {
+		async getUserList() {
+			const res = await this.$request({
+				url: "api/channels/queryList"
+			});
+			this.user = res
+		},
 		addBtnClick() {
 			uni.navigateTo({
 				url: `/pages/userAdd/userAdd`

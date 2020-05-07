@@ -129,7 +129,7 @@ export default {
 						{
 							title: '定期支出',
 							icon: 'icon iconfont icon-dingqi',
-							path: ''
+							path: 'regularPay'
 						},
 						{
 							title: '工资',

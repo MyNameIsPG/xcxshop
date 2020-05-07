@@ -45,5 +45,6 @@
     "uni-form-add": "/components/uni-form-add/uni-form-add",
     "uni-form-edit": "/components/uni-form-edit/uni-form-edit",
     "uni-switch": "/components/uni-switch/uni-switch"
-  }
+  },
+  "sitemapLocation": "sitemap63.json"
 }
