@@ -31,8 +31,7 @@ export default {
 	},
 	methods: {
 		async postSubmit(param) {
-			console.log(param)
-			this.$request({
+			await this.$request({
 				url: this.addInterface,
 				methods: "POST",
 				data: param

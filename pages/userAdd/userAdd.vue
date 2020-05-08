@@ -6,25 +6,25 @@
 					<sup>*</sup>
 					姓名
 				</view>
-				<view class="uni-form-item__content"><input v-model="form.AUName" class="uni-input__inner" placeholder="请输入姓名" /></view>
+				<view class="uni-form-item__content"><input v-model="form.auName" class="uni-input__inner" placeholder="请输入姓名" /></view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
 					手机号
 				</view>
-				<view class="uni-form-item__content"><input v-model="form.AUPhone" type="number" class="uni-input__inner" placeholder="请输入手机号" /></view>
+				<view class="uni-form-item__content"><input v-model="form.auPhone" type="number" class="uni-input__inner" placeholder="请输入手机号" /></view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
 					身份证
 				</view>
-				<view class="uni-form-item__content"><input v-model="form.AUIdCard" type="number" class="uni-input__inner" placeholder="请输入身份证" /></view>
+				<view class="uni-form-item__content"><input v-model="form.auIdCard" class="uni-input__inner" placeholder="请输入身份证" /></view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">管理员</view>
-				<view class="uni-form-item__content"><uni-switch v-model="form.IsAdmin"></uni-switch></view>
+				<view class="uni-form-item__content"><uni-switch v-model="form.isAdmin"></uni-switch></view>
 			</view>
 		</uni-form-add>
 	</view>
@@ -35,22 +35,22 @@ export default {
 	data() {
 		return {
 			form: {
-				AUName: '',
-				AUPhone: '',
-				AUIdCard: '',
-				IsAdmin: true
+				auName: '',
+				auIdCard: '',
+				auPhone: '',
+				isAdmin: true
 			},
 			rules: {
-				AUName: {
+				auName: {
 					required: '',
 					message: '请输入姓名'
 				},
-				AUPhone: {
+				auPhone: {
 					required: '',
 					type: 'phone',
 					message: '请输入手机号'
 				},
-				AUIdCard: {
+				auIdCard: {
 					required: '',
 					type: 'cardnum',
 					message: '请输入身份证'

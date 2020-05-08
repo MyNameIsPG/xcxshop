@@ -1,26 +1,23 @@
 <template>
 	<view class="container">
 		<view class="container-list">
-			<view class="item" v-for="item in userList" :key="item" @click="handleClickDetails('02cf730ea4d44dfdada71f6abf0ef78c')">
+			<view class="item" v-for="item in userList" :key="item.auId" @click="handleClickDetails(item.auId)">
 				<view class="left"><image src="../../static/img/user_default.jpg"></image></view>
 				<view class="right">
-					<view class="row row-lines"><view class="name">张三</view></view>
-					<!-- <view class="row">
+					<view class="row row-lines">
+						<view class="name">{{ item.auName }}</view>
+					</view>
+					<view class="row">
 						手机号码：
-						<text class="text">18588773304</text>
+						<text class="text">{{ item.auPhone }}</text>
 					</view>
 					<view class="row">
 						身份证号：
-						<text class="text">43048212581586</text>
+						<text class="text">{{ item.auIdCard }}</text>
 					</view>
-					<view class="row">
-						银行卡号：
-						<text class="text">1531254831821</text>
-					</view> -->
 				</view>
 			</view>
 		</view>
-		{{user}}
 		<uni-add @add-btn-click="addBtnClick"></uni-add>
 	</view>
 </template>
@@ -33,16 +30,18 @@ export default {
 	},
 	data() {
 		return {
-			userList: 10,
-			user: []
+			userList: []
 		};
 	},
+	created() {
+		this.getUserList(0);
+	},
 	methods: {
-		async getUserList() {
-			const res = await this.$request({
-				url: "api/channels/queryList"
+		async getUserList(num) {
+			const data = await this.$request({
+				url: `AppUser/List/${num}`
 			});
-			this.user = res
+			this.userList = JSON.parse(data);
 		},
 		addBtnClick() {
 			uni.navigateTo({
@@ -73,10 +72,13 @@ export default {
 				position absolute
 				content '\e6b0'
 				right 0rpx
-				top 12rpx
+				top 50%
 				font-family 'iconfont'
 				font-size 28px
+				height 30px
+				line-height 30px
 				color #999
+				margin-top -15px
 				transform rotate(90deg)
 			.left
 				width 80rpx
@@ -91,8 +93,6 @@ export default {
 					height 100%
 			.right
 				flex 1
-				display flex
-				align-items center
 				.row
 					color #999
 					font-size 28rpx
