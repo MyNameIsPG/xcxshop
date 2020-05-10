@@ -1,9 +1,9 @@
 <template>
 	<view class="container">
 		<view class="container-list">
-			<view class="item" v-for="item in userList" :key="item" @click="handleClickDetails(item)">
+			<view class="item" v-for="item in userList" :key="item.pytId" @click="handleClickDetails(item.pytId)">
 				<view class="right">
-					<view class="row row-lines"><view class="name">现金</view></view>
+					<view class="row row-lines"><view class="name">{{item.name}}</view></view>
 				</view>
 			</view>
 		</view>
@@ -19,10 +19,19 @@ export default {
 	},
 	data() {
 		return {
-			userList: 3,
+			userList: [],
 		};
 	},
+	created() {
+		this.getList(0);
+	},
 	methods: {
+		async getList(num) {
+			const data = await this.$request({
+				url: `AppPyType/List/${num}`
+			});
+			this.userList = JSON.parse(data);
+		},
 		addBtnClick() {
 			uni.navigateTo({
 				url: `/pages/expenseCategoryAdd/expenseCategoryAdd`

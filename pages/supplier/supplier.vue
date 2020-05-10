@@ -1,10 +1,10 @@
 <template>
 	<view class="container">
 		<view class="container-list">
-			<view class="item" v-for="item in userList" :key="item" @click="handleClickDetails(item)">
-				<view class="left" :style="{ background: colorArr[Math.floor(Math.random() * 10)] }">张</view>
+			<view class="item" v-for="item in userList" :key="item" @click="handleClickDetails(item.asId)">
+				<view class="left" :style="{ background: getColorIndex }">张</view>
 				<view class="right">
-					<view class="row row-lines"><view class="name">供应商名称</view></view>
+					<view class="row row-lines"><view class="name">{{item.name}}</view></view>
 					<!-- <view class="row">
 						手机号码：
 						<text class="text">18588773304</text>
@@ -36,7 +36,25 @@ export default {
 			colorArr: ['#409EFF', '#67C23A', '#00FFFF', '#F08080', '#FFE4E1', '#FFC0CB', '#F4A460', '#9ACD32', '#87CEFA', '#FF7F50']
 		};
 	},
+	computed: {
+		getColorIndex(inex) {
+			let r, g, b;
+			r = Math.floor(Math.random() * 256);
+			g = Math.floor(Math.random() * 256);
+			b = Math.floor(Math.random() * 256);
+			return 'rgb(' + r + ',' + g + ',' + b + ')';
+		}
+	},
+	created() {
+		this.getList(0);
+	},
 	methods: {
+		async getList(num) {
+			const data = await this.$request({
+				url: `AppSuppliers/List/${num}`
+			});
+			this.userList = JSON.parse(data);
+		},
 		addBtnClick() {
 			uni.navigateTo({
 				url: `/pages/supplierAdd/supplierAdd`

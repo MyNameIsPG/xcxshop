@@ -1,30 +1,30 @@
 <template>
-	<view>
-		<uni-form-edit class="uni-form" :model="form" :rules="rules" @submit="submitForm">
+	<view v-if="uid">
+		<uni-form-edit class="uni-form" :model.sync="form" :rules="rules" :uid="uid" query-one-interface="AppCustomer" edit-interface="AppCustomer" delete-interface="AppCustomer">
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
 					姓名
 				</view>
-				<view class="uni-form-item__content"><input v-model="form.AUName" class="uni-input__inner" placeholder="请输入姓名" /></view>
+				<view class="uni-form-item__content"><input v-model="form.auName" class="uni-input__inner" placeholder="请输入姓名" /></view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
 					手机号
 				</view>
-				<view class="uni-form-item__content"><input v-model="form.Phone" type="number" class="uni-input__inner" placeholder="请输入手机号" /></view>
+				<view class="uni-form-item__content"><input v-model="form.phone" type="number" class="uni-input__inner" placeholder="请输入手机号" /></view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
 					身份证
 				</view>
-				<view class="uni-form-item__content"><input v-model="form.IdCard" type="number" class="uni-input__inner" placeholder="请输入身份证" /></view>
+				<view class="uni-form-item__content"><input v-model="form.idCard" class="uni-input__inner" placeholder="请输入身份证" /></view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">地址</view>
-				<view class="uni-form-item__content"><textarea v-model="form.Address" class="uni-input__inner" placeholder="请输入地址" /></view>
+				<view class="uni-form-item__content"><textarea v-model="form.address" class="uni-input__inner" placeholder="请输入地址" /></view>
 			</view>
 		</uni-form-edit>
 	</view>
@@ -34,23 +34,27 @@
 export default {
 	data() {
 		return {
+			uid: '',
 			form: {
-				AUName: '123',
-				Phone: '',
-				IdCard: '',
-				Address: '地址信息'
+				auName: '',
+				sortName: '',
+				idCard: '',
+				phone: '',
+				sortPhone: '',
+				wxId: '',
+				address: ''
 			},
 			rules: {
-				AUName: {
+				auName: {
 					required: '',
 					message: '请输入姓名'
 				},
-				Phone: {
+				phone: {
 					required: '',
 					type: 'phone',
 					message: '请输入手机号'
 				},
-				IdCard: {
+				idCard: {
 					required: '',
 					type: 'cardnum',
 					message: '请输入身份证'
@@ -58,13 +62,8 @@ export default {
 			}
 		};
 	},
-	methods: {
-		submitForm: function(param) {
-			uni.showModal({
-				content: '表单数据内容：' + JSON.stringify(param),
-				showCancel: false
-			});
-		}
+	onLoad(option) {
+		this.uid = option.id;
 	}
 };
 </script>

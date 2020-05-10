@@ -1,59 +1,68 @@
 <template>
 	<view>
-		<uni-form-add class="uni-form" :model="form" :rules="rules" @submit="submitForm">
+		<uni-form-add class="uni-form" :model="form" :rules="rules" add-interface="AppInOrder">
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
-					客户名称
+					采购人
 				</view>
 				<view class="uni-form-item__content">
-					<picker @change="bindPickerChange" :value="index" :range="array">
-						<view class="uni-input">{{ array[index] }}</view>
+					<picker @change="bindPickerChange" :range="apuNameList" :value="apuNameListIndex" range-key="auName">
+						<view class="uni-input">{{ apuNameList[apuNameListIndex].auName }}</view>
 					</picker>
-					<!-- <input v-model="form.ACName" class="uni-input__inner" placeholder="请输入姓名" /> -->
 				</view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
-					付款方式
+					供应商
 				</view>
-				<view class="uni-form-item__content"><input v-model="form.PTName" type="number" class="uni-input__inner" placeholder="请输入手机号" /></view>
+				<view class="uni-form-item__content">
+					<picker @change="bindPickerChange1" :range="appSuppliersList" :value="appSuppliersListIndex" range-key="name">
+						<view class="uni-input">{{ appSuppliersList[appSuppliersListIndex].name }}</view>
+					</picker>
+				</view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
-					成交价格
+					采购物品
 				</view>
-				<view class="uni-form-item__content"><input v-model="form.RealPrice" type="number" class="uni-input__inner" placeholder="请输入身份证" /></view>
+				<view class="uni-form-item__content">
+					<picker @change="bindPickerChange2" :range="appGoodsList" :value="appGoodsListIndex" range-key="name">
+						<view class="uni-input">{{ appGoodsList[appGoodsListIndex].name }}</view>
+					</picker>
+				</view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
-					当时价格
+					采购价格
 				</view>
-				<view class="uni-form-item__content"><input v-model="form.Price" type="number" class="uni-input__inner" placeholder="请输入身份证" /></view>
+				<view class="uni-form-item__content"><input v-model="form.price" type="number" class="uni-input__inner" placeholder="请输入采购价格" /></view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">
 					<sup>*</sup>
-					实际数量
+					采购量
 				</view>
-				<view class="uni-form-item__content"><input v-model="form.Count" type="number" class="uni-input__inner" placeholder="请输入身份证" /></view>
+				<view class="uni-form-item__content"><input v-model="form.count" type="number" class="uni-input__inner" placeholder="请输入采购量" /></view>
 			</view>
 			<view class="uni-form-item">
-				<view class="uni-form-item__label">
-					<sup>*</sup>
-					成交数量
-				</view>
-				<view class="uni-form-item__content"><input v-model="form.RealCount" type="number" class="uni-input__inner" placeholder="请输入身份证" /></view>
+				<view class="uni-form-item__label">是否支付</view>
+				<view class="uni-form-item__content"><uni-switch v-model="form.isPay"></uni-switch></view>
 			</view>
 			<view class="uni-form-item">
-				<view class="uni-form-item__label">
-					<sup>*</sup>
-					成交减免金额
-				</view>
-				<view class="uni-form-item__content"><input v-model="form.DeductionMoney" type="number" class="uni-input__inner" placeholder="请输入身份证" /></view>
+				<view class="uni-form-item__label">已付运费</view>
+				<view class="uni-form-item__content"><uni-switch v-model="form.isPayFreight"></uni-switch></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">已付货款</view>
+				<view class="uni-form-item__content"><uni-switch v-model="form.isPFG"></uni-switch></view>
+			</view>
+			<view class="uni-form-item">
+				<view class="uni-form-item__label">不记批次</view>
+				<view class="uni-form-item__content"><uni-switch v-model="form.isNoBatch"></uni-switch></view>
 			</view>
 		</uni-form-add>
 	</view>
@@ -63,49 +72,88 @@
 export default {
 	data() {
 		return {
+			// 采购人
+			apuNameList: [],
+			apuNameListIndex: 0,
+			// 供应商
+			appSuppliersList: [],
+			appSuppliersListIndex: 0,
+			// 商品
+			appGoodsList: [],
+			appGoodsListIndex: 0,
 			form: {
-				APUId: '', // 采购人
-				APUName: '', //采购人姓名
-				ASId: '', // 供应商标识
-				ASName: '', // 供应商姓名
-				AGId: '', // 采购物品
-				AGName: '', // 物品名称
-				Price: '', // 采购价格
-				Count: '', // 采购量
-				IsPay: false, // 已付 运费 和 货款
-				IsPayFreight: false, // 已付运费
-				IsPFG: false, // 已付货款
-				IsNoBatch: false // 不记批次
+				apuId: '',
+				apuName: '',
+				asId: '',
+				asName: '',
+				agId: '',
+				agName: '',
+				price: 0,
+				count: 0,
+				isPay: true,
+				isPayFreight: true,
+				isPFG: true,
+				isNoBatch: true
 			},
-			index: 0,
-			array: ['中国', '美国', '巴西', '日本'],
-			rules: {
-				AUName: {
-					required: '',
-					message: '请输入姓名'
-				},
-				AUPhone: {
-					required: '',
-					type: 'phone',
-					message: '请输入手机号'
-				},
-				AUIdCard: {
-					required: '',
-					type: 'cardnum',
-					message: '请输入身份证'
-				}
-			}
+			rules: {}
 		};
 	},
+	created() {
+		this.getUserList(0);
+		this.getAppSuppliersList(0);
+		this.getAppGoodsList(0);
+	},
 	methods: {
-		submitForm: function(param) {
-			uni.showModal({
-				content: '表单数据内容：' + JSON.stringify(param),
-				showCancel: false
+		async getAppGoodsList(num) {
+			const data = await this.$request({
+				url: `AppGoods/List/${num}`
 			});
+			let obj = {
+				agId: '',
+				name: '请选择'
+			};
+			let arr = JSON.parse(data);
+			arr.unshift(obj);
+			this.appGoodsList = arr;
+		},
+		bindPickerChange2(e) {
+			this.appGoodsListIndex = e.target.value;
+			this.form.agId = this.appGoodsList[this.appGoodsListIndex].agId;
+			this.form.agName = this.appGoodsList[this.appGoodsListIndex].name;
+		},
+		async getUserList(num) {
+			const data = await this.$request({
+				url: `AppUser/List/${num}`
+			});
+			let obj = {
+				auId: '',
+				auName: '请选择'
+			};
+			let arr = JSON.parse(data);
+			arr.unshift(obj);
+			this.apuNameList = arr;
 		},
 		bindPickerChange(e) {
-			this.index = e.target.value;
+			this.apuNameListIndex = e.target.value;
+			this.form.apuId = this.apuNameList[this.apuNameListIndex].auId;
+			this.form.apuName = this.apuNameList[this.apuNameListIndex].auName;
+		},
+		async getAppSuppliersList(num) {
+			const data = await this.$request({
+				url: `AppSuppliers/List/${num}`
+			});
+			let obj = {
+				asId: '',
+				name: '请选择'
+			};
+			let arr = JSON.parse(data);
+			arr.unshift(obj);
+			this.appSuppliersList = arr;
+		},
+		bindPickerChange1(e) {
+			this.appSuppliersListIndex = e.target.value;
+			this.form.asId = this.appSuppliersList[this.appSuppliersListIndex].asId;
+			this.form.asName = this.appSuppliersList[this.appSuppliersListIndex].name;
 		}
 	}
 };

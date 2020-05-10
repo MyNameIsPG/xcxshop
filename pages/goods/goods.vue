@@ -1,10 +1,10 @@
 <template>
 	<view class="container">
 		<view class="container-list">
-			<view class="item" v-for="item in userList" :key="item" @click="handleClickDetails(item)">
+			<view class="item" v-for="item in userList" :key="item.agId" @click="handleClickDetails(item.agId)">
 				<view class="left"><image src="../../static/img/user_default.jpg"></image></view>
 				<view class="right">
-					<view class="row row-lines"><view class="name">张三</view></view>
+					<view class="row row-lines"><view class="name">{{item.name}}</view></view>
 					<!-- <view class="row">
 						手机号码：
 						<text class="text">18588773304</text>
@@ -32,10 +32,19 @@ export default {
 	},
 	data() {
 		return {
-			userList: 10
+			userList: []
 		};
 	},
+	created() {
+		this.getList(0);
+	},
 	methods: {
+		async getList(num) {
+			const data = await this.$request({
+				url: `AppGoods/List/${num}`
+			});
+			this.userList = JSON.parse(data);
+		},
 		addBtnClick() {
 			uni.navigateTo({
 				url: `/pages/goodsAdd/goodsAdd`
