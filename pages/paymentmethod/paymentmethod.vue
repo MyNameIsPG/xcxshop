@@ -1,31 +1,33 @@
 <template>
 	<view class="container">
-		<view class="container-list">
+		<view class="container-list" v-if="userList.length > 0">
 			<view class="item" v-for="item in userList" :key="item.pytId" @click="handleClickDetails(item.pytId)">
 				<view class="right">
-					<view class="row row-lines"><view class="name">{{item.name}}</view></view>
+					<view class="row row-lines">
+						<view class="name">{{ item.name }}</view>
+					</view>
 				</view>
 			</view>
 		</view>
+		<uni-nodata v-else></uni-nodata>
 		<uni-add @add-btn-click="addBtnClick"></uni-add>
 	</view>
 </template>
 
 <script>
-import uniAdd from '../../components/uni-add/uni-add.vue';
 export default {
-	components: {
-		uniAdd
-	},
 	data() {
 		return {
-			userList: [],
+			userList: []
 		};
 	},
 	created() {
 		this.getList(0);
 	},
 	methods: {
+		refreshList() {
+			this.getList(0);
+		},
 		async getList(num) {
 			const data = await this.$request({
 				url: `AppPyWay/List/${num}`

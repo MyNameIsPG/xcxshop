@@ -39,8 +39,11 @@ export default {
 			uni.showToast({
 				title: "新增成功"
 			});
+			if(this.$api.prePage().refreshList) {
+				this.$api.prePage().refreshList();
+			}
 			setTimeout(()=>{
-				uni.navigateBack(2);
+				uni.navigateBack();
 			},500)
 		},
 		submit: function() {

@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "商品管理",
-  "usingComponents": {
-    "uni-add": "/components/uni-add/uni-add"
-  }
+  "usingComponents": {}
 }

@@ -44,7 +44,7 @@
     "uni-add": "/components/uni-add/uni-add",
     "uni-form-add": "/components/uni-form-add/uni-form-add",
     "uni-form-edit": "/components/uni-form-edit/uni-form-edit",
-    "uni-switch": "/components/uni-switch/uni-switch"
-  },
-  "sitemapLocation": "sitemap95.json"
+    "uni-switch": "/components/uni-switch/uni-switch",
+    "uni-nodata": "/components/uni-nodata/uni-nodata"
+  }
 }

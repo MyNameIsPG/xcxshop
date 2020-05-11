@@ -1,10 +1,12 @@
 <template>
 	<view class="container">
-		<view class="container-list">
+		<view class="container-list" v-if="userList.length > 0">
 			<view class="item" v-for="item in userList" :key="item.agId" @click="handleClickDetails(item.agId)">
 				<view class="left"><image src="../../static/img/user_default.jpg"></image></view>
 				<view class="right">
-					<view class="row row-lines"><view class="name">{{item.name}}</view></view>
+					<view class="row row-lines">
+						<view class="name">{{ item.name }}</view>
+					</view>
 					<!-- <view class="row">
 						手机号码：
 						<text class="text">18588773304</text>
@@ -20,16 +22,13 @@
 				</view>
 			</view>
 		</view>
+		<uni-nodata v-else></uni-nodata>
 		<uni-add @add-btn-click="addBtnClick"></uni-add>
 	</view>
 </template>
 
 <script>
-import uniAdd from '../../components/uni-add/uni-add.vue';
 export default {
-	components: {
-		uniAdd
-	},
 	data() {
 		return {
 			userList: []
@@ -39,6 +38,9 @@ export default {
 		this.getList(0);
 	},
 	methods: {
+		refreshList() {
+			this.getList(0);
+		},
 		async getList(num) {
 			const data = await this.$request({
 				url: `AppGoods/List/${num}`

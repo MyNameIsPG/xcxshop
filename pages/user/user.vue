@@ -1,6 +1,6 @@
 <template>
 	<view class="container">
-		<view class="container-list">
+		<view class="container-list" v-if="userList.length > 0">
 			<view class="item" v-for="item in userList" :key="item.auId" @click="handleClickDetails(item.auId)">
 				<view class="left"><image src="../../static/img/user_default.jpg"></image></view>
 				<view class="right">
@@ -18,16 +18,13 @@
 				</view>
 			</view>
 		</view>
+		<uni-nodata v-else></uni-nodata>
 		<uni-add @add-btn-click="addBtnClick"></uni-add>
 	</view>
 </template>
 
 <script>
-import uniAdd from '../../components/uni-add/uni-add.vue';
 export default {
-	components: {
-		uniAdd
-	},
 	data() {
 		return {
 			userList: []
@@ -52,6 +49,9 @@ export default {
 			uni.navigateTo({
 				url: `/pages/userDetails/userDetails?id=${id}`
 			});
+		},
+		refreshList() {
+			this.getUserList(0);
 		}
 	}
 };

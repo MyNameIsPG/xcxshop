@@ -105,8 +105,11 @@ export default {
 			uni.showToast({
 				title: '修改成功'
 			});
+			if(this.$api.prePage().refreshList) {
+				this.$api.prePage().refreshList();
+			}
 			setTimeout(() => {
-				uni.navigateBack(2);
+				uni.navigateBack();
 			}, 500);
 		},
 		del() {
@@ -131,8 +134,11 @@ export default {
 			uni.showToast({
 				title: '删除成功'
 			});
+			if(this.$api.prePage().refreshList) {
+				this.$api.prePage().refreshList();
+			}
 			setTimeout(() => {
-				uni.navigateBack(2);
+				uni.navigateBack();
 			}, 500);
 		},
 		isPoneAvailable(value) {

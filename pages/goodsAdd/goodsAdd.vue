@@ -14,7 +14,7 @@
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">是否商品大类</view>
-				<view class="uni-form-item__content"><input v-model="form.isFamily" class="uni-input__inner" placeholder="请输入是否商品大类" /></view>
+				<view class="uni-form-item__content"><uni-switch v-model="form.isFamily"></uni-switch></view>
 			</view>
 			<view class="uni-form-item">
 				<view class="uni-form-item__label">是否销售</view>
@@ -30,7 +30,7 @@ export default {
 		return {
 			form: {
 				name: '',
-				isFamily: '',
+				isFamily: true,
 				fagId: '',
 				isSelling: true
 			},

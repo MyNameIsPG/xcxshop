@@ -1,6 +1,6 @@
 <template>
 	<view class="container">
-		<view class="container-list">
+		<view class="container-list" v-if="userList.length > 0">
 			<view class="item" v-for="item in userList" :key="item.acId" @click="handleClickDetails(item.acId)">
 				<view class="left" :style="{ background: getColorIndex }">张</view>
 				<view class="right">
@@ -10,16 +10,13 @@
 				</view>
 			</view>
 		</view>
+		<uni-nodata v-else></uni-nodata>
 		<uni-add @add-btn-click="addBtnClick"></uni-add>
 	</view>
 </template>
 
 <script>
-import uniAdd from '../../components/uni-add/uni-add.vue';
 export default {
-	components: {
-		uniAdd
-	},
 	data() {
 		return {
 			userList: [],
@@ -39,6 +36,9 @@ export default {
 		this.getList(0);
 	},
 	methods: {
+		refreshList() {
+			this.getList(0);
+		},
 		async getList(num) {
 			const data = await this.$request({
 				url: `AppCustomer/List/${num}`
